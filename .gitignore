@@ -1,0 +1,9 @@
+*.user
+*.suo
+src/Core/PortalConhecimento.Infrastructure/bin/*
+src/Core/PortalConhecimento.Infrastructure/obj/*
+src/Core/PortalConhecimento.Domain/obj/*
+src/Core/PortalConhecimento.Domain/bin/*
+PortalConhecimento.UI.Web/obj/*
+packages/*
+PortalConhecimento.UI.Web/bin/*
