@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E023DFE9-D9E7-45FE-B5DE-1F554EFA1A06}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalConhecimento.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalConhecimento.Infrastructure", "src\Core\PortalConhecimento.Infrastructure\PortalConhecimento.Infrastructure.csproj", "{305D98DA-1294-4E8F-BCE0-CCB4D157BDA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalConhecimento.UI.Web", "PortalConhecimento.UI.Web\PortalConhecimento.UI.Web.csproj", "{D0CDD47E-1894-4EF4-9B62-EFA30F5EFFC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalConhecimento.UI.Web", "src\UI\PortalConhecimento.UI.Web\PortalConhecimento.UI.Web.csproj", "{D0CDD47E-1894-4EF4-9B62-EFA30F5EFFC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
