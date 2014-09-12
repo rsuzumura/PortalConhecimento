@@ -1,50 +1,153 @@
 ﻿body {
-    padding-top: 0px;
-    padding-bottom: 20px;
-    background-image: url("images/bg.jpg");
-    z-index: -999;
+    background: url("images/bg.jpg") repeat;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.header {
+    background: url("images/bgTopo.jpg") no-repeat;
+    height: 132px;
 }
 
-.main-color {
-    background-color: #FFF;
+.container {
+    background-color: #fff;
+    width: 981px !important;
+    max-width: none;
 }
 
-.header-bg {
-    background: url("images/header-bg.png") repeat-x;
+.bottom-space {
+    margin-bottom: 5px;
 }
 
-/* styles for validation helpers */
-.field-validation-error {
-    color: #b94a48;
+.triple-bottom-space {
+    margin-bottom: 15px;
 }
 
-.field-validation-valid {
-    display: none;
+.hexa-bottom-space {
+    margin-bottom: 30px;
 }
 
-input.input-validation-error {
-    border: 1px solid #b94a48;
+.top-banner {
+    background-color: #013300;
+    height: 19px;
 }
 
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
+.marca {
+    background: url("images/marca.png") no-repeat;
+    height: 109px;
+    margin-left: 20px;
+    width: 470px;
 }
 
-.validation-summary-errors {
-    color: #b94a48;
+.rodape {
+    background: url("images/rodape.jpg") no-repeat;
+    height: 44px;
 }
 
-.validation-summary-valid {
-    display: none;
+/*#region MENU */
+
+#menu {
+    list-style: none;
 }
 
-.sm
-{
-    font-size: 10px;
+    #menu li {
+        float: left;
+        padding-left: 6px;
+        padding-right: 5px;
+    }
+
+.corporate {
+    width: 170px;
+    height: 53px;
+    display: block;
+    background: transparent url('images/bt_palestrasCorporativas.png') center top no-repeat;
+}
+
+    .corporate:hover {
+        width: 170px;
+        height: 53px;
+        display: block;
+        background: transparent url('images/bt_palestrasCorporativas_r.png') center top no-repeat;
+    }
+
+.aulas {
+    width: 170px;
+    height: 53px;
+    display: block;
+    background: transparent url('images/bt_conheca_nossasAulas.png') center top no-repeat;
+}
+
+    .aulas:hover {
+        width: 170px;
+        height: 53px;
+        display: block;
+        background: transparent url('images/bt_conheca_nossasAulas_r.png') center top no-repeat;
+    }
+
+.registros {
+    width: 170px;
+    height: 53px;
+    display: block;
+    background: transparent url('images/bt_meusRegistros.png') center top no-repeat;
+}
+
+    .registros:hover {
+        width: 170px;
+        height: 53px;
+        display: block;
+        background: transparent url('images/bt_meusRegistros_r.png') center top no-repeat;
+    }
+
+.duvidas {
+    width: 170px;
+    height: 53px;
+    display: block;
+    background: transparent url('images/bt_temDuvida.png') center top no-repeat;
+}
+
+    .duvidas:hover {
+        width: 170px;
+        height: 53px;
+        display: block;
+        background: transparent url('images/bt_temDuvida_r.png') center top no-repeat;
+    }
+
+.fale-conosco {
+    width: 170px;
+    height: 53px;
+    display: block;
+    background: transparent url('images/bt_faleConosco.png') center top no-repeat;
+}
+
+    .fale-conosco:hover {
+        width: 170px;
+        height: 53px;
+        display: block;
+        background: transparent url('images/bt_faleConosco_r.png') center top no-repeat;
+    }
+
+/*#endregion */
+
+.depoimentos {
+    width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.depoimento {
+    height: 167px;
+    border: solid #c2c1c1  1px;
+}
+
+.depoimento-imagem {
+    max-width: 102px;
+    max-height: 165px;
+}
+
+.foto {
+    width: 102px;
+    float: left;
+}
+
+.texto {
+    width: 220px;
+    float: right;
 }

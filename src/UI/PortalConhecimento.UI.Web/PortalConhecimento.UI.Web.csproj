@@ -181,8 +181,31 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\banner_home01.jpg" />
+    <Content Include="Content\images\banner_home02.jpg" />
+    <Content Include="Content\images\banner_home03.jpg" />
+    <Content Include="Content\images\banner_home04.jpg" />
+    <Content Include="Content\images\banner_home05.jpg" />
+    <Content Include="Content\images\banner_home06.jpg" />
+    <Content Include="Content\images\banner_publiciHome01.jpg" />
+    <Content Include="Content\images\banner_publiciHome02.jpg" />
     <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\bgTopo.jpg" />
+    <Content Include="Content\images\box_conhecaMetodo.jpg" />
+    <Content Include="Content\images\bt_conheca_nossasAulas.png" />
+    <Content Include="Content\images\bt_conheca_nossasAulas_r.png" />
+    <Content Include="Content\images\bt_faleConosco.png" />
+    <Content Include="Content\images\bt_faleConosco_r.png" />
+    <Content Include="Content\images\bt_meusRegistros.png" />
+    <Content Include="Content\images\bt_meusRegistros_r.png" />
+    <Content Include="Content\images\bt_palestrasCorporativas.png" />
+    <Content Include="Content\images\bt_palestrasCorporativas_r.png" />
+    <Content Include="Content\images\bt_temDuvida.png" />
+    <Content Include="Content\images\bt_temDuvida_r.png" />
+    <Content Include="Content\images\fotoDepoimento.jpg" />
     <Content Include="Content\images\header-bg.png" />
+    <Content Include="Content\images\marca.png" />
+    <Content Include="Content\images\rodape.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -212,6 +235,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_PartialLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
