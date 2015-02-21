@@ -8,19 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="row header">
-            <div class="col-xs-6 marca"></div>
-            <div class="col-xs-6">@Html.Partial("_PartialLogin")</div>
-        </div>
-        <div class="row bottom-space">
-            <ul id="menu">
-                <li><a href="#" class="corporate"></a></li>
-                <li><a href="#" class="aulas"></a></li>
-                <li><a href="#" class="registros"></a></li>
-                <li><a href="#" class="duvidas"></a></li>
-                <li><a href="#" class="fale-conosco"></a></li>
-            </ul>
-        </div>
+        @if (Context.User.Identity.IsAuthenticated)
+        {
+            @Html.Partial("_LoggedHeaderPartial")
+        }
+        else
+        {
+            @Html.Partial("_AnonymousHeaderPartial", new PortalConhecimento.UI.Web.ViewModels.LoginViewModel())
+        }
         <div class="row top-banner"></div>
         @RenderBody()
         <div class="row rodape">

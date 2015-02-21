@@ -1,0 +1,31 @@
+﻿@model PortalConhecimento.UI.Web.ViewModels.LoginViewModel
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Seja bem vindo, @(User.Identity.Name)</p>
+}
+else
+{
+    using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form", id = "formLogin" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Acesse o seu espaço do Portal do Conhecimento</h4>
+        <div>
+            @Html.LabelFor(m => m.UserName, new { @class = "col-xs-2" })
+            @Html.TextBoxFor(m => m.UserName, new { @class = "input-sm col-xs-9" })
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Password, new { @class = "col-xs-2" })
+            @Html.PasswordFor(m => m.Password, new { @class = "input-sm col-xs-9" })
+        </div>
+        <div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-9">
+                @Html.ActionLink("Faça seu cadastro", "Register", "Account", null, null)
+                |
+                @Html.ActionLink("Esqueceu a senha?", "ForgotPassword", "Account", null, null)
+                |
+                <a href="javascript:$('#formLogin').submit();">Entrar</a>
+            </div>
+        </div>
+    }
+}

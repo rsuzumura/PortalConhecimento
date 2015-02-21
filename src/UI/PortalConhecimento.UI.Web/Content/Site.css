@@ -13,6 +13,10 @@
     max-width: none;
 }
 
+.validation-summary-valid {
+    display: none;
+}
+
 .bottom-space {
     margin-bottom: 5px;
 }
@@ -46,82 +50,69 @@
 
 #menu {
     list-style: none;
+    min-width: 700px;
+}
+
+.anonymous-menu {
+    width: 800px;
 }
 
     #menu li {
         float: left;
-        padding-left: 6px;
-        padding-right: 5px;
+        margin-left: 3px;
+        margin-right: 3px;
+        display: inline;
+    }
+
+    #menu li > a {
+        width: 170px;
+        height: 53px;
+        display: inline-block;
     }
 
 .corporate {
-    width: 170px;
-    height: 53px;
-    display: block;
-    background: transparent url('images/bt_palestrasCorporativas.png') center top no-repeat;
+    background:url('images/menu-icons.png');
+    background-position: 0 -378px;
 }
 
     .corporate:hover {
-        width: 170px;
-        height: 53px;
-        display: block;
-        background: transparent url('images/bt_palestrasCorporativas_r.png') center top no-repeat;
+        background-position: 0 -442px;
     }
 
 .aulas {
-    width: 170px;
-    height: 53px;
-    display: block;
-    background: transparent url('images/bt_conheca_nossasAulas.png') center top no-repeat;
+    background:url('images/menu-icons.png');
+    background-position: 0 0;
 }
 
     .aulas:hover {
-        width: 170px;
-        height: 53px;
-        display: block;
-        background: transparent url('images/bt_conheca_nossasAulas_r.png') center top no-repeat;
+        background-position: 0 -63px;
     }
 
 .registros {
-    width: 170px;
-    height: 53px;
-    display: block;
-    background: transparent url('images/bt_meusRegistros.png') center top no-repeat;
+    background:url('images/menu-icons.png');
+    background-position: 0 -252px;
 }
 
     .registros:hover {
-        width: 170px;
-        height: 53px;
-        display: block;
-        background: transparent url('images/bt_meusRegistros_r.png') center top no-repeat;
+        background-position: 0 -315px;
     }
 
 .duvidas {
-    width: 170px;
-    height: 53px;
-    display: block;
-    background: transparent url('images/bt_temDuvida.png') center top no-repeat;
+    background:url('images/menu-icons.png');
+    background-position: 0 -506px;
 }
 
     .duvidas:hover {
-        width: 170px;
-        height: 53px;
-        display: block;
-        background: transparent url('images/bt_temDuvida_r.png') center top no-repeat;
+        background-position: 0 -569px;
     }
 
 .fale-conosco {
-    width: 170px;
-    height: 53px;
-    display: block;
-    background: transparent url('images/bt_faleConosco.png') center top no-repeat;
+    background:url('images/menu-icons.png');
+    background-position: 0 -126px;
 }
 
     .fale-conosco:hover {
-        width: 170px;
-        height: 53px;
-        display: block;
-        background: transparent url('images/bt_faleConosco_r.png') center top no-repeat;
+        background-position: 0 -189px;
     }
 
 /*#endregion */
