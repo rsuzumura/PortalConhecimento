@@ -1,17 +1,13 @@
-﻿using PortalConhecimento.Security.Managers;
-using PortalConhecimento.UI.Web.ViewModels;
+﻿using AutoMapper;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Owin.Security;
+using PortalConhecimento.Security.Entities;
+using PortalConhecimento.Security.Managers;
+using PortalConhecimento.UI.Web.ViewModels;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using System.Threading.Tasks;
-using Microsoft.Owin.Security;
-using AutoMapper;
-using PortalConhecimento.Security.Entities;
 
 namespace PortalConhecimento.UI.Web.Controllers
 {

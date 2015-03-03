@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PortalConhecimento.UI.Web.ViewModels.FAQViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">FAQ - Perguntas Mais Frequentes</h2>
+<hr />
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading clickable" role="tab" id="faq-@item.Id" data-toggle="collapse" data-parent="#accordion" href="#faq-details-@item.Id" aria-controls="faq-details-@item.Id">
+                <h4 class="panel-title">
+                    <span class="glyphicon glyphicon-menu-right"></span>@item.Cabecalho
+                </h4>
+            </div>
+            <div id="faq-details-@item.Id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-@item.Id">
+                <div class="panel-body">
+                    @Html.Raw(item.Conteudo)
+                </div>
+            </div>
+        </div>
+    }
+</div>

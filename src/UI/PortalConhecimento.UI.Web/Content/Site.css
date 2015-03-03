@@ -142,3 +142,18 @@
     width: 220px;
     float: right;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+div.clickable:hover {
+    color: #ffffff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.validation-summary-errors {
+    display: none;
+    visibility: hidden;
+}

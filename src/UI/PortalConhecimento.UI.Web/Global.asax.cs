@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using PortalConhecimento.UI.Web.Attributes;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -13,6 +11,19 @@ namespace PortalConhecimento.UI.Web
     {
         protected void Application_Start()
         {
+            ClientDataTypeModelValidatorProvider.ResourceClassKey = "DefaultResource";
+            DefaultModelBinder.ResourceClassKey = "DefaultResource";
+
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(
+                typeof(RequiredAttribute),
+                typeof(CustomRequiredAttribute)
+            );
+
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(
+                typeof(StringLengthAttribute),
+                typeof(CustomStringLengthAttribute)
+            );
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

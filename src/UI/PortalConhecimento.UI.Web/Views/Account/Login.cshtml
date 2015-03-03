@@ -7,9 +7,7 @@
 @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form", id = "formLogin" }))
 {
     @Html.AntiForgeryToken()
-    <div class="form-group">
-        @Html.ValidationSummary(false, "Atenção, verifique os seguintes erros:", new { @class = "alert alert-danger" })
-    </div>
+    @Html.ValidationSummary(false, Resources.DefaultResource.ErrorSummary)
     <div class="form-group">
         <div class="row">
             @Html.LabelFor(m => m.UserName, new { @class = "col-xs-2" })

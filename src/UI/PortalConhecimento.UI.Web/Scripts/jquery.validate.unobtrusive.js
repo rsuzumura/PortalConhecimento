@@ -76,10 +76,11 @@
         if (list && list.length && validator.errorList.length) {
             list.empty();
             container.addClass("validation-summary-errors").removeClass("validation-summary-valid");
-
+            var title = container.find("span").text();
             $.each(validator.errorList, function () {
                 $("<li />").html(this.message).appendTo(list);
             });
+            toastr["error"](list.html(), title);
         }
     }
 

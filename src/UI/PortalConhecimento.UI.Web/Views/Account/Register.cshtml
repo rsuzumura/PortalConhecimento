@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
     <h4>Cadastro de Novo Usuário</h4>
     <hr />
-    @Html.ValidationSummary(false, "Atenção, verifique os seguintes erros:", new { @class = "alert alert-danger" })
+    @Html.ValidationSummary(false, Resources.DefaultResource.ErrorSummary)
     <div class="form-group">
         <div class="row">
             @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })

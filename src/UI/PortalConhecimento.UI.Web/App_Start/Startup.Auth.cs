@@ -30,7 +30,8 @@ namespace PortalConhecimento.UI.Web
                         TimeSpan.FromMinutes(30),
                         (manager, user) => user.GenerateUserIdentityAsync(manager),
                         (identity) => identity.GetUserId<int>())
-                }
+                },
+                CookieName = "PortalConhecimento-Cookie"
             });
             // Use a cookie to temporarily store information about a user logging in with a third party login provider
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);

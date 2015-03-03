@@ -1,0 +1,32 @@
+﻿@model PortalConhecimento.UI.Web.ViewModels.ContatoViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">Fale Conosco</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, Resources.DefaultResource.ErrorSummary)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nome)
+        @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Assunto)
+        @Html.TextBoxFor(m => m.Assunto, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Mensagem)
+        @Html.TextAreaFor(m => m.Mensagem, new { @class = "form-control", style = "height: 200px;" })
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Enviar</button>
+    </div>
+}
+

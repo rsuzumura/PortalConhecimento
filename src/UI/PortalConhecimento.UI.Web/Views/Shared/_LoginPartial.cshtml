@@ -8,12 +8,13 @@ else
     using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form", id = "formLogin" }))
     {
         @Html.AntiForgeryToken()
+        @Html.ValidationSummary(false, Resources.DefaultResource.ErrorSummary)
         <h4>Acesse o seu espaço do Portal do Conhecimento</h4>
-        <div>
+        <div class="form-group" style="margin-bottom: 0;">
             @Html.LabelFor(m => m.UserName, new { @class = "col-xs-2" })
             @Html.TextBoxFor(m => m.UserName, new { @class = "input-sm col-xs-9" })
         </div>
-        <div>
+        <div class="form-group" style="margin-bottom: 0;">
             @Html.LabelFor(m => m.Password, new { @class = "col-xs-2" })
             @Html.PasswordFor(m => m.Password, new { @class = "input-sm col-xs-9" })
         </div>

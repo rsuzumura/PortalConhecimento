@@ -4,6 +4,7 @@
 <head>
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/toastr")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -15,8 +16,8 @@
             <ul id="menu" class="anonymous-menu center-block">
                 <li><a href="#" class="corporate"></a></li>
                 <li><a href="#" class="aulas"></a></li>
-                <li><a href="#" class="duvidas"></a></li>
-                <li><a href="#" class="fale-conosco"></a></li>
+                <li><a href="@Url.Action("Index", "FAQ")" class="duvidas"></a></li>
+                <li><a href="@Url.Action("Index", "FaleConosco")" class="fale-conosco"></a></li>
             </ul>
         </div>
         <div class="row top-banner"></div>
@@ -27,6 +28,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/toastr")
     @RenderSection("Scripts", false)
 </body>
 </html>

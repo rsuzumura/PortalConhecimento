@@ -23,9 +23,16 @@ namespace PortalConhecimento.UI.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
+                        "~/Scripts/toastr.js",
+                        "~/Scripts/toastr-defaults.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/toastr").Include(
+                      "~/Content/toastr.css"));
         }
     }
 }

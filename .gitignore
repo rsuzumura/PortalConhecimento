@@ -4,6 +4,8 @@ src/Core/PortalConhecimento.Infrastructure/bin/*
 src/Core/PortalConhecimento.Infrastructure/obj/*
 src/Core/PortalConhecimento.Domain/obj/*
 src/Core/PortalConhecimento.Domain/bin/*
+src/Core/PortalConhecimento.Security/obj/*
+src/Core/PortalConhecimento.Security/bin/*
 src/UI/PortalConhecimento.UI.Web/obj/*
 packages/*
 src/UI/PortalConhecimento.UI.Web/bin/*
