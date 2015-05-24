@@ -5,6 +5,8 @@ using Microsoft.Owin.Security;
 using PortalConhecimento.Security.Entities;
 using PortalConhecimento.Security.Managers;
 using PortalConhecimento.UI.Web.ViewModels;
+using Recaptcha.Web;
+using Recaptcha.Web.Mvc;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -62,6 +64,20 @@ namespace PortalConhecimento.UI.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterUserViewModel model)
         {
+            var recaptchaHelper = this.GetRecaptchaVerificationHelper();
+            if (string.IsNullOrEmpty(recaptchaHelper.Response))
+            {
+                ModelState.AddModelError("", "O captcha é obrigatório.");
+                return View(model);
+            }
+
+            var recaptchaResult = await recaptchaHelper.VerifyRecaptchaResponseTaskAsync();
+            if (recaptchaResult != RecaptchaVerificationResult.Success)
+            {
+                ModelState.AddModelError("", "Captcha incorreto.");
+                return View(model);
+            }
+
             if (ModelState.IsValid)
             {
                 Mapper.CreateMap<RegisterUserViewModel, AppUser>();

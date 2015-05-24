@@ -12,10 +12,12 @@ namespace PortalConhecimento.UI.Web.ViewModels
         public string Nome { get; set; }
 
         [Required]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "O formato do e-mail está inválido.")]
+        [StringLength(100)]
         public string Email { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string Assunto { get; set; }
 
         [Required]

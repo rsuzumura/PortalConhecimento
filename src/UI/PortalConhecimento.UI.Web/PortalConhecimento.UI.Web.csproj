@@ -15,7 +15,7 @@
     <AssemblyName>PortalConhecimento.UI.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -105,9 +105,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha.Web">
+      <HintPath>..\..\..\packages\RecaptchaNet.1.6.0\lib\net45\Recaptcha.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -175,6 +185,9 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
+    <Reference Include="Unity.Mvc5">
+      <HintPath>..\..\..\packages\Unity.Mvc5.1.1\lib\net45\Unity.Mvc5.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -194,10 +207,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DefaultResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\CustomRequiredAttribute.cs" />
     <Compile Include="Attributes\CustomStringLengthAttribute.cs" />
@@ -208,6 +223,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MapperProfiles\AutoMapperProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ContatoViewModel.cs" />
@@ -238,6 +254,9 @@
     <Content Include="Content\images\marca.png" />
     <Content Include="Content\images\menu-icons.png" />
     <Content Include="Content\images\rodape.jpg" />
+    <Content Include="RecaptchaNet.ReadMe.txt" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\jquery.validate.cpf.js" />
     <Content Include="Scripts\toastr-defaults.js" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
@@ -388,6 +407,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\PortalConhecimento.Domain\PortalConhecimento.Domain.csproj">
+      <Project>{23c43b00-0b8a-41b3-b49a-6ae179bf9468}</Project>
+      <Name>PortalConhecimento.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\PortalConhecimento.Infrastructure\PortalConhecimento.Infrastructure.csproj">
+      <Project>{305d98da-1294-4e8f-bce0-ccb4d157bda4}</Project>
+      <Name>PortalConhecimento.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\PortalConhecimento.Security\PortalConhecimento.Security.csproj">
       <Project>{de740f9e-5430-4d11-b77a-ada1929d8fe8}</Project>
       <Name>PortalConhecimento.Security</Name>
@@ -417,7 +444,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51035</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51035/</IISUrl>
+          <IISUrl>http://localhost/PortalConhecimento</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

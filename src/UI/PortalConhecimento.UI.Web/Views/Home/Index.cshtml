@@ -118,3 +118,19 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        object message;
+        TempData.TryGetValue("Message", out message);
+    }
+
+    @if (message != null)
+    {
+        <script>
+            $(function () {
+                toastr.info('@message.ToString()', "Mensagem Enviada com Sucesso!");
+            });
+        </script>
+    }
+}

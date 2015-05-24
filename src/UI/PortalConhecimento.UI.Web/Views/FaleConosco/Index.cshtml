@@ -1,4 +1,5 @@
-﻿@model PortalConhecimento.UI.Web.ViewModels.ContatoViewModel
+﻿@using Recaptcha.Web.Mvc;
+@model PortalConhecimento.UI.Web.ViewModels.ContatoViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -24,6 +25,9 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Mensagem)
         @Html.TextAreaFor(m => m.Mensagem, new { @class = "form-control", style = "height: 200px;" })
+    </div>
+    <div class="form-group">
+        @Html.Recaptcha()
     </div>
     <div class="form-group">
         <button class="btn btn-primary">Enviar</button>
