@@ -17,6 +17,8 @@ namespace PortalConhecimento.Security.Entities
 
         public bool Enabled { get; set; }
 
+        public string IPAddress { get; set; }
+
         public Task<ClaimsIdentity> GenerateUserIdentityAsync(AppUserManager manager)
         {
             return Task.FromResult(GenerateUserIdentity(manager));

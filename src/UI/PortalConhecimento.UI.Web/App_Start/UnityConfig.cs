@@ -3,6 +3,7 @@ using Microsoft.Practices.Unity;
 using Unity.Mvc5;
 using PortalConhecimento.Domain.Interfaces.Repositories;
 using PortalConhecimento.Infrastructure.Repositories;
+using PortalConhecimento.UI.Web.Controllers;
 
 namespace PortalConhecimento.UI.Web
 {
@@ -17,6 +18,7 @@ namespace PortalConhecimento.UI.Web
             
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IContatoRepository, ContatoRepository>();
+            container.RegisterType<AccountController>(new InjectionConstructor());
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

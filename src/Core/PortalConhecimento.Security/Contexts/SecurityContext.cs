@@ -23,6 +23,7 @@ namespace PortalConhecimento.Security.Contexts
             modelBuilder.Entity<AppUser>()
                 .ToTable("Users")
                 .Property(p => p.PhoneNumber).HasMaxLength(50);
+
             modelBuilder.Entity<AppRole>().ToTable("Roles");
             modelBuilder.Entity<AppUserRole>().ToTable("UsersRoles");
             modelBuilder.Entity<AppClaim>().ToTable("UsersClaims");

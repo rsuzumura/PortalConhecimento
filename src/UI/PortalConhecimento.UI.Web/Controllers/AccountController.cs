@@ -83,6 +83,7 @@ namespace PortalConhecimento.UI.Web.Controllers
                 Mapper.CreateMap<RegisterUserViewModel, AppUser>();
                 var user = Mapper.Map<RegisterUserViewModel, AppUser>(model);
                 user.Enabled = true;
+                user.IPAddress = GetUserIP(Request);
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -243,6 +244,20 @@ namespace PortalConhecimento.UI.Web.Controllers
                 return Redirect(returnUrl);
             }
             return RedirectToAction("Index", "Home");
+        }
+
+        protected string GetUserIP(HttpRequestBase request)
+        {
+            var result = string.Empty;
+            if (request.ServerVariables["HTTP_X_FORWARDED_FOR"] != null)
+            {
+                result = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            }
+            else if (request.UserHostAddress.Length != 0)
+            {
+                result = request.UserHostAddress;
+            }
+            return result;
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
