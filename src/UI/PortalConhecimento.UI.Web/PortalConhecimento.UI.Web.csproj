@@ -256,7 +256,7 @@
     <Content Include="Content\images\rodape.jpg" />
     <Content Include="RecaptchaNet.ReadMe.txt" />
     <Content Include="Scripts\jquery.mask.js" />
-    <Content Include="Scripts\jquery.validate.cpf.js" />
+    <Content Include="Scripts\validate.cpf.js" />
     <Content Include="Scripts\toastr-defaults.js" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
@@ -342,6 +342,7 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\PKG.pubxml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

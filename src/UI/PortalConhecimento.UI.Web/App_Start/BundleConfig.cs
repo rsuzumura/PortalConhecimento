@@ -12,7 +12,8 @@ namespace PortalConhecimento.UI.Web
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate*",
+                        "~/Scripts/validate.cpf.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery-mask").Include(
                         "~/Scripts/jquery.mask.js"));

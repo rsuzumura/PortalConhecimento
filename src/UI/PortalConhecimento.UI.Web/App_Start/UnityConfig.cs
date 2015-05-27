@@ -1,9 +1,9 @@
-using System.Web.Mvc;
 using Microsoft.Practices.Unity;
-using Unity.Mvc5;
 using PortalConhecimento.Domain.Interfaces.Repositories;
 using PortalConhecimento.Infrastructure.Repositories;
 using PortalConhecimento.UI.Web.Controllers;
+using System.Web.Mvc;
+using Unity.Mvc5;
 
 namespace PortalConhecimento.UI.Web
 {
