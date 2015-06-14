@@ -15,7 +15,7 @@ namespace PortalConhecimento.Infrastructure.Repositories
             return result;
         }
 
-        public Tag BuscarPorPalavra(string palavra)
+        public Tag BuscarTagPorPalavra(string palavra)
         {
             var result = this._context.Tags
                 .Where(t => t.Palavra == palavra).FirstOrDefault();
