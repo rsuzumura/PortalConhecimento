@@ -267,6 +267,9 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\apps\anuncios\anuncio-app.js" />
+    <Content Include="Scripts\apps\anuncios\controllers\anuncio-controller.js" />
+    <Content Include="Scripts\apps\anuncios\services\anuncio-service.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\ng-tags-input.js" />
     <Content Include="Scripts\validate.cpf.js" />
@@ -461,7 +464,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51035</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/PortalConhecimento</IISUrl>
+          <IISUrl>http://localhost/portaldoconhecimento1br</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

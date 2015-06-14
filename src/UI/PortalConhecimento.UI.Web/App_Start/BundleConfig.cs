@@ -18,25 +18,36 @@ namespace PortalConhecimento.UI.Web
             bundles.Add(new ScriptBundle("~/bundles/jquery-mask").Include(
                         "~/Scripts/jquery.mask.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/ng-tags-input").Include("~/Scripts/ng-tags-input.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/apps/anuncio-app").Include(
+                "~/Scripts/apps/anuncios/anuncio-app.js",
+                "~/Scripts/apps/anuncios/controllers/anuncio-controller.js",
+                "~/Scripts/apps/anuncios/services/anuncio-service.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
-                        "~/Scripts/toastr.js",
-                        "~/Scripts/toastr-defaults.js"));
+                "~/Scripts/toastr.js",
+                "~/Scripts/toastr-defaults.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                "~/Content/bootstrap.css",
+                "~/Content/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/toastr").Include(
-                      "~/Content/toastr.css"));
+            bundles.Add(new StyleBundle("~/Content/ng-tags-input").Include(
+                "~/Content/ng-tags-input.css",
+                "~/Content/ng-tags-input.bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/toastr").Include("~/Content/toastr.css"));
         }
     }
 }

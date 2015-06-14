@@ -4,8 +4,7 @@
 
 
 @section Styles {
-    <link href="~/Content/ng-tags-input.css" rel="stylesheet" />
-    <link href="~/Content/ng-tags-input.bootstrap.css" rel="stylesheet" />
+    @Styles.Render("~/Content/ng-tags-input")
 }
 
 <h2>Cadastro de Anúncio</h2>
@@ -52,67 +51,7 @@
 </div>
 
 @section Scripts {
-    <script src="~/Scripts/angular.js"></script>
-    <script src="~/Scripts/ng-tags-input.js"></script>
-    <script>
-        var app = angular.module('AnuncioApp', ['ngTagsInput']);
-        app.factory('anuncioService', ['$http', function ($http) {
-            return {
-                listarPalavras: function (palavraInicial) {
-                    return $http.get('/PortalConhecimento/api/Anuncios/ListarPalavras', {
-                        params: { palavraInicial: palavraInicial }
-                    })
-                        .success(function (data) {
-                            return data;
-                        })
-                        .error(function (data) {
-                            return data;
-                        });
-                },
-                post: function (anuncio) {
-                    return $http.post('/PortalConhecimento/api/Anuncios', anuncio)
-                        .success(function (data) {
-                            return data;
-                        })
-                        .error(function (data) {
-                            return data;
-                        });
-                }
-            };
-        }]);
-        app.controller('AnuncioController', ['$scope', 'anuncioService', function ($scope, anuncioService) {
-            $scope.anuncio = {};
-            $scope.anuncio.Tags = [];
-
-            $scope.loadTags = function (query) {
-                return anuncioService.listarPalavras(query);
-            };
-
-            $scope.gravar = function () {
-                if (!formAnuncio.$invalid) {
-                    anuncioService.post($scope.anuncio)
-                    .success(function (data) {
-                        $(".btn-default")[0].click();
-                    })
-                    .error(function (data) {
-                        if (data.ModelState) {
-                            var $errors = $("<ul></ul>");
-                            for (var key in data.ModelState) {
-                                for (var i = 0; i < data.ModelState[key].length; i++) {
-                                    $errors.append("<li>" + data.ModelState[key][i] + "</li>");
-                                }
-                            }
-
-                            toastr.warning($errors, "Atenção, verifique os seguintes erros:");
-                        }
-                    });
-                }
-            };
-
-            $scope.verificarTamanhoDescricao = function () {
-                var tamanhoAtual = 4000 - ($scope.anuncio.Descricao ? $scope.anuncio.Descricao.length : 0);
-                return tamanhoAtual;
-            }
-        }]);
-    </script>
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/ng-tags-input")
+    @Scripts.Render("~/bundles/apps/anuncio-app")
 }
