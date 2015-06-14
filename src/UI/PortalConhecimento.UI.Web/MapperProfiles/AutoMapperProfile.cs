@@ -9,6 +9,9 @@ namespace PortalConhecimento.UI.Web
         protected override void Configure()
         {
             CreateMap<ContatoViewModel, Contato>();
+            CreateMap<AnuncioViewModel, Anuncio>()
+                .ForMember(dest => dest.Tags,
+                           opts => opts.Ignore());
         }
     }
 }

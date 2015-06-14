@@ -30,14 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Configuration\AnuncioConfig.cs" />
     <Compile Include="Configuration\ContatoConfig.cs" />
     <Compile Include="Contexts\PortalConhecimentoContext.cs" />
     <Compile Include="Migrations\201505270029468_AddContatosTable.cs" />
     <Compile Include="Migrations\201505270029468_AddContatosTable.Designer.cs">
       <DependentUpon>201505270029468_AddContatosTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506120406223_IncludeAnuncioTable.cs" />
+    <Compile Include="Migrations\201506120406223_IncludeAnuncioTable.Designer.cs">
+      <DependentUpon>201506120406223_IncludeAnuncioTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AnuncioRepository.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ContatoRepository.cs" />
   </ItemGroup>
@@ -64,6 +70,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505270029468_AddContatosTable.resx">
       <DependentUpon>201505270029468_AddContatosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506120406223_IncludeAnuncioTable.resx">
+      <DependentUpon>201506120406223_IncludeAnuncioTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

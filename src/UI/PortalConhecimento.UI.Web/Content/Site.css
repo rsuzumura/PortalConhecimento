@@ -157,3 +157,15 @@ div.clickable:hover {
     display: none;
     visibility: hidden;
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.ng-dirty.ng-invalid, .ng-touched.ng-invalid {
+    border-color: red;
+}
+
+.ng-dirty.ng-valid, .ng-touched.ng-valid {
+    border-color: green;
+}

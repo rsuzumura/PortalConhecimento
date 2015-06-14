@@ -30,7 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\Anuncio.cs" />
     <Compile Include="Entities\Contato.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Enums\StatusAnuncio.cs" />
+    <Compile Include="Enums\TipoAnuncio.cs" />
+    <Compile Include="Interfaces\Repositories\IAnuncioRepository.cs" />
     <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
     <Compile Include="Interfaces\Repositories\IContatoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

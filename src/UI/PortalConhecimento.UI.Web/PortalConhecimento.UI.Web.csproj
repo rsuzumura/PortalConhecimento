@@ -188,6 +188,9 @@
     <Reference Include="Unity.Mvc5">
       <HintPath>..\..\..\packages\Unity.Mvc5.1.1\lib\net45\Unity.Mvc5.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.WebApi">
+      <HintPath>..\..\..\packages\Unity.WebAPI.5.1\lib\net45\Unity.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -217,15 +220,19 @@
     <Compile Include="Attributes\CustomRequiredAttribute.cs" />
     <Compile Include="Attributes\CustomStringLengthAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnunciosController.cs" />
+    <Compile Include="Controllers\Api\AnunciosController.cs" />
     <Compile Include="Controllers\FaleConoscoController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\ValidateModelStateAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MapperProfiles\AutoMapperProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AnuncioViewModel.cs" />
     <Compile Include="ViewModels\ContatoViewModel.cs" />
     <Compile Include="ViewModels\FAQViewModel.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
@@ -254,8 +261,14 @@
     <Content Include="Content\images\marca.png" />
     <Content Include="Content\images\menu-icons.png" />
     <Content Include="Content\images\rodape.jpg" />
+    <Content Include="Content\ng-tags-input.bootstrap.css" />
+    <Content Include="Content\ng-tags-input.css" />
     <Content Include="RecaptchaNet.ReadMe.txt" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\ng-tags-input.js" />
     <Content Include="Scripts\validate.cpf.js" />
     <Content Include="Scripts\toastr-defaults.js" />
     <Content Include="Content\toastr.css" />
@@ -346,6 +359,7 @@
     <None Include="Properties\PublishProfiles\PKG.pubxml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
@@ -398,6 +412,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js.map">
       <DependentUpon>jquery.validate.unobtrusive.min.js</DependentUpon>
     </Content>
+    <Content Include="Views\Anuncios\Index.cshtml" />
+    <Content Include="Views\Anuncios\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

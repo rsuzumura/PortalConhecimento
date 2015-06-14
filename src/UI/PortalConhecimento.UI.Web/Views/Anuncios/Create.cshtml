@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+
+@section Styles {
+    <link href="~/Content/ng-tags-input.css" rel="stylesheet" />
+    <link href="~/Content/ng-tags-input.bootstrap.css" rel="stylesheet" />
+}
+
+<h2>Cadastro de Anúncio</h2>
+
+<div ng-app="AnuncioApp" ng-controller="AnuncioController">
+    <form name="formAnuncio" ng-submit="gravar()" novalidate>
+        <div class="form-group">
+            <label>Selecione o Tipo de Anúncio:</label>
+            <select class="form-control" ng-model="anuncio.TipoAnuncio" required>
+                <option value="">Selecione...</option>
+                <option value="1">Palestra Corporativa</option>
+                <option value="2">Aulas Individuais</option>
+                <option value="3">Aulas em Grupo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Tema/Título:</label>
+            <input type="text" class="form-control" ng-model="anuncio.Titulo" maxlength="300" required placeholder="Digite o título da palestra" />
+        </div>
+        <div class="form-group">
+            <label>Descrição:&nbsp;</label><span ng-cloak class="badge" style="background-color: steelblue;">{{verificarTamanhoDescricao()}}</span>
+            <textarea class="form-control" rows="5" ng-model="anuncio.Descricao" required placeholder="Faça um descritivo da sua palestra"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Nuvem de Tags:</label>
+            <tags-input ng-model="anuncio.Tags"
+                        placeholder="Informe as palavras-chave para consulta do anúncio (pressione ENTER por palavra)"
+                        replace-spaces-with-dashes="false"
+                        display-property="Palavra">
+                <auto-complete source="loadTags($query)" min-length="3"></auto-complete>
+            </tags-input>
+        </div>
+        <div class="form-group text-right">
+            <a href="@Url.Action("Index")" class="btn btn-default">
+                <i class="glyphicon glyphicon-share-alt"></i>
+                Cancelar
+            </a>
+            <button class="btn btn-primary" ng-disabled="formAnuncio.$invalid">
+                <i class="glyphicon glyphicon-floppy-disk"></i>
+                Gravar
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/ng-tags-input.js"></script>
+    <script>
+        var app = angular.module('AnuncioApp', ['ngTagsInput']);
+        app.factory('anuncioService', ['$http', function ($http) {
+            return {
+                listarPalavras: function (palavraInicial) {
+                    return $http.get('/PortalConhecimento/api/Anuncios/ListarPalavras', {
+                        params: { palavraInicial: palavraInicial }
+                    })
+                        .success(function (data) {
+                            return data;
+                        })
+                        .error(function (data) {
+                            return data;
+                        });
+                },
+                post: function (anuncio) {
+                    return $http.post('/PortalConhecimento/api/Anuncios', anuncio)
+                        .success(function (data) {
+                            return data;
+                        })
+                        .error(function (data) {
+                            return data;
+                        });
+                }
+            };
+        }]);
+        app.controller('AnuncioController', ['$scope', 'anuncioService', function ($scope, anuncioService) {
+            $scope.anuncio = {};
+            $scope.anuncio.Tags = [];
+
+            $scope.loadTags = function (query) {
+                return anuncioService.listarPalavras(query);
+            };
+
+            $scope.gravar = function () {
+                if (!formAnuncio.$invalid) {
+                    anuncioService.post($scope.anuncio)
+                    .success(function (data) {
+                        $(".btn-default")[0].click();
+                    })
+                    .error(function (data) {
+                        if (data.ModelState) {
+                            var $errors = $("<ul></ul>");
+                            for (var key in data.ModelState) {
+                                for (var i = 0; i < data.ModelState[key].length; i++) {
+                                    $errors.append("<li>" + data.ModelState[key][i] + "</li>");
+                                }
+                            }
+
+                            toastr.warning($errors, "Atenção, verifique os seguintes erros:");
+                        }
+                    });
+                }
+            };
+
+            $scope.verificarTamanhoDescricao = function () {
+                var tamanhoAtual = 4000 - ($scope.anuncio.Descricao ? $scope.anuncio.Descricao.length : 0);
+                return tamanhoAtual;
+            }
+        }]);
+    </script>
+}

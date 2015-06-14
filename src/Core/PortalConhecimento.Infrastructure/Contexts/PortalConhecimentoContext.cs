@@ -12,6 +12,8 @@ namespace PortalConhecimento.Infrastructure.Contexts
         }
 
         public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Anuncio> Anuncios { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -19,6 +21,7 @@ namespace PortalConhecimento.Infrastructure.Contexts
 
             modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar").HasMaxLength(200));
             modelBuilder.Configurations.Add<Contato>(new ContatoConfig());
+            modelBuilder.Configurations.Add<Anuncio>(new AnuncioConfig());
         }
     }
 }
