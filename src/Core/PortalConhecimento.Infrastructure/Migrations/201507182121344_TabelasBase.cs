@@ -3,7 +3,7 @@ namespace PortalConhecimento.Infrastructure.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class IncludeAnuncioTable : DbMigration
+    public partial class TabelasBase : DbMigration
     {
         public override void Up()
         {
@@ -20,6 +20,10 @@ namespace PortalConhecimento.Infrastructure.Migrations
                         DataAlteracao = c.DateTime(nullable: false),
                         IdUsuario = c.Int(nullable: false),
                         Aprovado = c.Boolean(nullable: false),
+                        HoraInicial = c.Time(precision: 7),
+                        HoraFinal = c.Time(precision: 7),
+                        Regiao = c.String(maxLength: 200, unicode: false),
+                        Preco = c.Decimal(precision: 18, scale: 2),
                         TipoAnuncio = c.Byte(nullable: false),
                         StatusAnuncio = c.Byte(nullable: false),
                     })
@@ -31,6 +35,18 @@ namespace PortalConhecimento.Infrastructure.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Palavra = c.String(maxLength: 200, unicode: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Contatos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Nome = c.String(nullable: false, maxLength: 80, unicode: false),
+                        Email = c.String(nullable: false, maxLength: 100, unicode: false),
+                        Assunto = c.String(nullable: false, maxLength: 50, unicode: false),
+                        Mensagem = c.String(nullable: false, maxLength: 800, unicode: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -56,6 +72,7 @@ namespace PortalConhecimento.Infrastructure.Migrations
             DropIndex("dbo.TagAnuncios", new[] { "Anuncio_Id" });
             DropIndex("dbo.TagAnuncios", new[] { "Tag_Id" });
             DropTable("dbo.TagAnuncios");
+            DropTable("dbo.Contatos");
             DropTable("dbo.Tags");
             DropTable("dbo.Anuncios");
         }

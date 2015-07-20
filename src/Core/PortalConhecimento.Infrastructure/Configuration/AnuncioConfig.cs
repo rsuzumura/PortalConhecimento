@@ -7,6 +7,7 @@ namespace PortalConhecimento.Infrastructure.Configuration
     {
         public AnuncioConfig()
         {
+            this.ToTable("Anuncios");
             this.Property(p => p.Titulo)
                 .HasMaxLength(300)
                 .IsRequired();
@@ -14,6 +15,14 @@ namespace PortalConhecimento.Infrastructure.Configuration
                 .HasMaxLength(4000)
                 .IsRequired();
             this.Property(p => p.Nota).HasMaxLength(300);
+            this.HasMany(a => a.Experiencias)
+                .WithMany()
+                .Map(a =>
+                {
+                    a.MapLeftKey("AnuncioId");
+                    a.MapRightKey("ExperienciaId");
+                    a.ToTable("AnunciosExperiencias");
+                });
         }
     }
 }

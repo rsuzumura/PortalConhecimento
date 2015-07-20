@@ -21,8 +21,13 @@ namespace PortalConhecimento.Domain.Entities
         public DateTime DataAlteracao { get; set; }
         public int IdUsuario { get; set; }
         public bool Aprovado { get; set; }
+        public TimeSpan? HoraInicial { get; set; }
+        public TimeSpan? HoraFinal { get; set; }
+        public string Regiao { get; set; }
+        public decimal? Preco { get; set; }
         public TipoAnuncio TipoAnuncio { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
         public StatusAnuncio StatusAnuncio { get; set; }
+        public virtual ICollection<Experiencia> Experiencias { get; set; }
     }
 }

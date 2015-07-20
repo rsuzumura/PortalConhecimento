@@ -38,15 +38,6 @@
     <Compile Include="Entities\AppUserRole.cs" />
     <Compile Include="Managers\AppSignInManager.cs" />
     <Compile Include="Managers\AppUserManager.cs" />
-    <Compile Include="Migrations\201502210018321_InitialCreate.cs" />
-    <Compile Include="Migrations\201502210018321_InitialCreate.Designer.cs">
-      <DependentUpon>201502210018321_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505270027363_AddIPAddressForUser.cs" />
-    <Compile Include="Migrations\201505270027363_AddIPAddressForUser.Designer.cs">
-      <DependentUpon>201505270027363_AddIPAddressForUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Stores\AppUserStore.cs" />
@@ -98,12 +89,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502210018321_InitialCreate.resx">
-      <DependentUpon>201502210018321_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505270027363_AddIPAddressForUser.resx">
-      <DependentUpon>201505270027363_AddIPAddressForUser.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

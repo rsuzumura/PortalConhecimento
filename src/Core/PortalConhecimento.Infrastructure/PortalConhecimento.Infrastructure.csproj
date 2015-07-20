@@ -32,14 +32,16 @@
   <ItemGroup>
     <Compile Include="Configuration\AnuncioConfig.cs" />
     <Compile Include="Configuration\ContatoConfig.cs" />
+    <Compile Include="Configuration\ExperienciaConfig.cs" />
+    <Compile Include="Configuration\UsuarioConfig.cs" />
     <Compile Include="Contexts\PortalConhecimentoContext.cs" />
-    <Compile Include="Migrations\201505270029468_AddContatosTable.cs" />
-    <Compile Include="Migrations\201505270029468_AddContatosTable.Designer.cs">
-      <DependentUpon>201505270029468_AddContatosTable.cs</DependentUpon>
+    <Compile Include="Migrations\201507182121344_TabelasBase.cs" />
+    <Compile Include="Migrations\201507182121344_TabelasBase.Designer.cs">
+      <DependentUpon>201507182121344_TabelasBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506120406223_IncludeAnuncioTable.cs" />
-    <Compile Include="Migrations\201506120406223_IncludeAnuncioTable.Designer.cs">
-      <DependentUpon>201506120406223_IncludeAnuncioTable.cs</DependentUpon>
+    <Compile Include="Migrations\201507192130407_AddExperiencia.cs" />
+    <Compile Include="Migrations\201507192130407_AddExperiencia.Designer.cs">
+      <DependentUpon>201507192130407_AddExperiencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,11 +70,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505270029468_AddContatosTable.resx">
-      <DependentUpon>201505270029468_AddContatosTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507182121344_TabelasBase.resx">
+      <DependentUpon>201507182121344_TabelasBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201506120406223_IncludeAnuncioTable.resx">
-      <DependentUpon>201506120406223_IncludeAnuncioTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507192130407_AddExperiencia.resx">
+      <DependentUpon>201507192130407_AddExperiencia.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

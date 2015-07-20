@@ -32,7 +32,9 @@
   <ItemGroup>
     <Compile Include="Entities\Anuncio.cs" />
     <Compile Include="Entities\Contato.cs" />
+    <Compile Include="Entities\Experiencia.cs" />
     <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Enums\StatusAnuncio.cs" />
     <Compile Include="Enums\TipoAnuncio.cs" />
     <Compile Include="Interfaces\Repositories\IAnuncioRepository.cs" />
