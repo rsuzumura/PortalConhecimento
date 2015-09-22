@@ -169,3 +169,46 @@ div.clickable:hover {
 .ng-dirty.ng-valid, .ng-touched.ng-valid {
     border-color: green;
 }
+
+.palestra-corporativa-header {
+    background-color: #c2970e;
+    height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+    .palestra-corporativa-header p {
+        font-weight: bold;
+        color: #c2970e;
+        position: relative;
+        top: -60px;
+        left: 130px;
+    }
+
+.aulas-icon {
+    position: relative;
+    left: 40px;
+    bottom: 30px;
+}
+
+.coruja-icon {
+    position: relative;
+    top: -145px;
+    left: 835px;
+}
+
+.link-oferecer-palestra {
+    position: relative;
+    color: #FFF;
+    bottom: 30px;
+    left: 45px;
+    font-weight: bold;
+}
+
+.link-procura-palestra {
+    position: relative;
+    bottom: 30px;
+    left: 60px;
+    color: #FFF;
+    font-weight: bold;
+}

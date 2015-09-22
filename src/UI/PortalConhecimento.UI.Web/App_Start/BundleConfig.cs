@@ -18,13 +18,20 @@ namespace PortalConhecimento.UI.Web
             bundles.Add(new ScriptBundle("~/bundles/jquery-mask").Include(
                         "~/Scripts/jquery.mask.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js"));
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-cookies.js",
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-animate.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/ng-tags-input").Include("~/Scripts/ng-tags-input.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/apps/anuncio-app").Include(
                 "~/Scripts/apps/anuncios/anuncio-app.js",
                 "~/Scripts/apps/anuncios/controllers/anuncio-controller.js",
+                "~/Scripts/apps/anuncios/controllers/cadastro-inicial-controller.js",
+                "~/Scripts/apps/anuncios/controllers/cadastro-proximo-controller.js",
+                "~/Scripts/apps/anuncios/controllers/cadastro-final-controller.js",
                 "~/Scripts/apps/anuncios/services/anuncio-service.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -41,6 +48,7 @@ namespace PortalConhecimento.UI.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
+                "~/Content/font-awesome.css",
                 "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/ng-tags-input").Include(

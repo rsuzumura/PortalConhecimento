@@ -225,6 +225,7 @@
     <Compile Include="Controllers\FaleConoscoController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PalestrasCorporativasController.cs" />
     <Compile Include="Filters\ValidateModelStateAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +246,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\banner_home01.jpg" />
     <Content Include="Content\images\banner_home02.jpg" />
     <Content Include="Content\images\banner_home03.jpg" />
@@ -256,19 +259,35 @@
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\bgTopo.jpg" />
     <Content Include="Content\images\box_conhecaMetodo.jpg" />
+    <Content Include="Content\images\corporativa-icon.png" />
+    <Content Include="Content\images\coruja.png" />
     <Content Include="Content\images\fotoDepoimento.jpg" />
     <Content Include="Content\images\header-bg.png" />
     <Content Include="Content\images\marca.png" />
     <Content Include="Content\images\menu-icons.png" />
+    <Content Include="Content\images\oferecer-palestras-icon.png" />
+    <Content Include="Content\images\procura-palestras.png" />
     <Content Include="Content\images\rodape.jpg" />
     <Content Include="Content\ng-tags-input.bootstrap.css" />
     <Content Include="Content\ng-tags-input.css" />
-    <Content Include="RecaptchaNet.ReadMe.txt" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\apps\anuncios\anuncio-app.js" />
+    <Content Include="Scripts\apps\anuncios\cadastro-pagina3.html" />
+    <Content Include="Scripts\apps\anuncios\cadastro-pagina2.html" />
+    <Content Include="Scripts\apps\anuncios\cadastro-pagina1.html" />
     <Content Include="Scripts\apps\anuncios\controllers\anuncio-controller.js" />
+    <Content Include="Scripts\apps\anuncios\controllers\cadastro-inicial-controller.js" />
+    <Content Include="Scripts\apps\anuncios\controllers\cadastro-proximo-controller.js" />
+    <Content Include="Scripts\apps\anuncios\controllers\cadastro-final-controller.js" />
     <Content Include="Scripts\apps\anuncios\services\anuncio-service.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\ng-tags-input.js" />
@@ -358,11 +377,19 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\PKG.pubxml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
@@ -417,6 +444,8 @@
     </Content>
     <Content Include="Views\Anuncios\Index.cshtml" />
     <Content Include="Views\Anuncios\Create.cshtml" />
+    <Content Include="Views\PalestrasCorporativas\Index.cshtml" />
+    <Content Include="Views\PalestrasCorporativas\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
