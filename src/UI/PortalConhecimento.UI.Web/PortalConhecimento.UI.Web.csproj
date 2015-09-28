@@ -248,6 +248,7 @@
     <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\angular.rangeSlider.css" />
     <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -289,6 +290,7 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.rangeSlider.js" />
     <Content Include="Scripts\apps\anuncios\anuncio-app.js" />
     <Content Include="Scripts\apps\anuncios\cadastro-pagina3.html" />
     <Content Include="Scripts\apps\anuncios\cadastro-pagina2.html" />

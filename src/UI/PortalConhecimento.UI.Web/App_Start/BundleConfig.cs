@@ -55,6 +55,8 @@ namespace PortalConhecimento.UI.Web
 
             bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap-select").Include("~/Scripts/angular-bootstrap-select.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular-rangeslider").Include("~/Scripts/angular.rangeSlider.js"));
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
@@ -66,6 +68,8 @@ namespace PortalConhecimento.UI.Web
                 "~/Content/ng-tags-input.bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/bootstrap-select").Include("~/Content/bootstrap-select.css"));
+
+            bundles.Add(new StyleBundle("~/Content/angular-rangeslider").Include("~/Content/angular.rangeSlider.css"));
 
             bundles.Add(new StyleBundle("~/Content/toastr").Include("~/Content/toastr.css"));
 

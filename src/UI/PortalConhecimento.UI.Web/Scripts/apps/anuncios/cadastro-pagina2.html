@@ -20,7 +20,10 @@
                         </label>
                     </div>
                 </div>
-                <label></label>
+                <div class="form-group">
+                    <div range-slider min="0" max="1439" model-min="anuncio.DiaUtilInicio" model-max="anuncio.DiaUtilFim" disabled="!anuncio.DiasUteis"></div>
+                    <label class="label label-primary">Das {{formatarHora(anuncio.DiaUtilInicio)}} até {{formatarHora(anuncio.DiaUtilFim)}}</label>
+                </div>
             </div>
         </div>
 
@@ -34,7 +37,10 @@
                         </label>
                     </div>
                 </div>
-                <label></label>
+                <div class="form-group">
+                    <div range-slider min="0" max="1439" model-min="anuncio.FimDeSemanaFeriadoInicio" model-max="anuncio.FimDeSemanaFeriadoFim" disabled="!anuncio.FinsDeSemanaEFeriados"></div>
+                    <label class="label label-primary">Das {{formatarHora(anuncio.FimDeSemanaFeriadoInicio)}} até {{formatarHora(anuncio.FimDeSemanaFeriadoFim)}}</label>
+                </div>
             </div>
         </div>
 
