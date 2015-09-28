@@ -15,7 +15,9 @@ namespace PortalConhecimento.Infrastructure.Contexts
         public DbSet<Anuncio> Anuncios { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Experiencia> Experiencias { get; set; }
+        public DbSet<Estado> Estados { get; set; }
+        public DbSet<Cidade> Cidades { get; set; }
+        public DbSet<Bairro> Bairros { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -25,7 +27,9 @@ namespace PortalConhecimento.Infrastructure.Contexts
             modelBuilder.Configurations.Add<Contato>(new ContatoConfig());
             modelBuilder.Configurations.Add<Anuncio>(new AnuncioConfig());
             modelBuilder.Configurations.Add<Usuario>(new UsuarioConfig());
-            modelBuilder.Configurations.Add<Experiencia>(new ExperienciaConfig());
+            modelBuilder.Configurations.Add<Estado>(new EstadoConfig());
+            modelBuilder.Configurations.Add<Cidade>(new CidadeConfig());
+            modelBuilder.Configurations.Add<Bairro>(new BairroConfig());
         }
     }
 }

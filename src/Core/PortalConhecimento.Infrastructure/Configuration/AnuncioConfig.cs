@@ -14,15 +14,10 @@ namespace PortalConhecimento.Infrastructure.Configuration
             this.Property(p => p.Descricao)
                 .HasMaxLength(4000)
                 .IsRequired();
+            this.Property(p => p.Observacoes)
+                .HasMaxLength(4000);
             this.Property(p => p.Nota).HasMaxLength(300);
-            this.HasMany(a => a.Experiencias)
-                .WithMany()
-                .Map(a =>
-                {
-                    a.MapLeftKey("AnuncioId");
-                    a.MapRightKey("ExperienciaId");
-                    a.ToTable("AnunciosExperiencias");
-                });
+            this.Property(p => p.Experiencia).HasMaxLength(8000);
         }
     }
 }

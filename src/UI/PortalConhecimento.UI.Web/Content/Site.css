@@ -57,12 +57,12 @@
     width: 800px;
 }
 
-    #menu li {
-        float: left;
-        margin-left: 3px;
-        margin-right: 3px;
-        display: inline;
-    }
+#menu li {
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: inline;
+}
 
     #menu li > a {
         width: 170px;
@@ -71,7 +71,7 @@
     }
 
 .corporate {
-    background:url('images/menu-icons.png');
+    background: url('images/menu-icons.png');
     background-position: 0 -378px;
 }
 
@@ -80,7 +80,7 @@
     }
 
 .aulas {
-    background:url('images/menu-icons.png');
+    background: url('images/menu-icons.png');
     background-position: 0 0;
 }
 
@@ -89,7 +89,7 @@
     }
 
 .registros {
-    background:url('images/menu-icons.png');
+    background: url('images/menu-icons.png');
     background-position: 0 -252px;
 }
 
@@ -98,7 +98,7 @@
     }
 
 .duvidas {
-    background:url('images/menu-icons.png');
+    background: url('images/menu-icons.png');
     background-position: 0 -506px;
 }
 
@@ -107,7 +107,7 @@
     }
 
 .fale-conosco {
-    background:url('images/menu-icons.png');
+    background: url('images/menu-icons.png');
     background-position: 0 -126px;
 }
 
@@ -125,7 +125,7 @@
 
 .depoimento {
     height: 167px;
-    border: solid #c2c1c1  1px;
+    border: solid #c2c1c1 1px;
 }
 
 .depoimento-imagem {
@@ -159,7 +159,7 @@ div.clickable:hover {
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+    display: none !important;
 }
 
 .ng-dirty.ng-invalid, .ng-touched.ng-invalid {
@@ -211,4 +211,92 @@ div.clickable:hover {
     left: 60px;
     color: #FFF;
     font-weight: bold;
+}
+
+@keyframes rotateFall {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: rotateZ(17deg);
+    }
+
+    60% {
+        transform: rotateZ(16deg);
+    }
+
+    100% {
+        transform: translateY(100%) rotateZ(17deg);
+    }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to {
+        transform: translateZ(-3000px) rotateZ(360deg);
+        opacity: 0;
+    }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.ng-enter {
+    animation: fadeIn 1s both ease-in;
+}
+
+.ng-leave {
+    display: none;
 }

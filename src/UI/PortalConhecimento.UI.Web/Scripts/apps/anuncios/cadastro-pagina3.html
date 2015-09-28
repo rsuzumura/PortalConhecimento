@@ -14,19 +14,15 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label>Estado de:</label>
-                    <select class="form-control">
+                    <select class="form-control" data-live-search="true"
+                            ng-model="anuncio.EstadoId"
+                            select-model="estados"
+                            ng-collection="estados"
+                            ng-options="item.Id as item.Nome for item in estados"
+                            data-selectpicker data-style="btn btn-default btn-sm"
+                            ng-change="carregarCidades()">
+                        <option value="">Selecione...</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoEstado" />
-                        Deslocamento por conta do palestrante
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoEstado" />
-                        Deslocamento por conta do contratante
-                    </label>
                 </div>
             </div>
         </div>
@@ -35,18 +31,15 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label>Cidade de:</label>
-                    <select class="form-control"></select>
-                </div>
-                <div class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoCidade" />
-                        Deslocamento por conta do palestrante
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoCidade" />
-                        Deslocamento por conta do contratante
-                    </label>
+                    <select class="form-control" data-live-search="true"
+                            ng-model="anuncio.CidadeId"
+                            select-model="cidades"
+                            ng-collection="cidades"
+                            ng-options="item.Id as item.Nome for item in cidades"
+                            data-selectpicker data-style="btn btn-default btn-sm"
+                            ng-change="carregarBairros()">
+                        <option value="">Selecione...</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -55,18 +48,14 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label>Bairro de:</label>
-                    <select class="form-control"></select>
-                </div>
-                <div class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoBairro" />
-                        Deslocamento por conta do palestrante
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="deslocamentoBairro" />
-                        Deslocamento por conta do contratante
-                    </label>
+                    <select class="form-control" data-live-search="true"
+                            ng-model="anuncio.BairroId"
+                            select-model="bairros"
+                            ng-collection="bairros"
+                            ng-options="item.Id as item.Nome for item in bairros"
+                            data-selectpicker data-style="btn btn-default btn-sm">
+                        <option value="">Selecione...</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -96,8 +85,8 @@
         <div class="row">
             <div class="col-md-6 form-group">
                 <a class="btn btn-warning" href="#/proximo">
+                    <i class="fa fa-arrow-circle-left"></i>
                     Anterior
-                    <i class="fa fa-arrow-circle-left pull-right"></i>
                 </a>
             </div>
             <div class="col-md-6 form-group text-right">

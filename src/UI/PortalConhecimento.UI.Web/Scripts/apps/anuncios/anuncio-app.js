@@ -1,4 +1,4 @@
-﻿var app = angular.module('AnuncioApp', ['ngTagsInput', 'ngRoute', 'ngCookies' ]);
+﻿var app = angular.module('AnuncioApp', ['ngTagsInput', 'ngRoute', 'ngCookies', 'ngAnimate', 'angular-bootstrap-select']);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider

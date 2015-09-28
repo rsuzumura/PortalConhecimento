@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace PortalConhecimento.Domain.Entities
@@ -8,7 +7,6 @@ namespace PortalConhecimento.Domain.Entities
     {
         public Usuario()
         {
-            this.Experiencias = new HashSet<Experiencia>();
         }
 
         public int Id { get; set; }
@@ -43,6 +41,6 @@ namespace PortalConhecimento.Domain.Entities
 
         public string UserName { get; set; }
 
-        public virtual ICollection<Experiencia> Experiencias { get; set; }
+        public virtual ICollection<Anuncio> Anuncios { get; set; }
     }
 }

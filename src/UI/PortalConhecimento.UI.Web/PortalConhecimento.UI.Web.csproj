@@ -222,6 +222,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AnunciosController.cs" />
     <Compile Include="Controllers\Api\AnunciosController.cs" />
+    <Compile Include="Controllers\Api\BairrosController.cs" />
+    <Compile Include="Controllers\Api\CidadesController.cs" />
+    <Compile Include="Controllers\Api\EstadosController.cs" />
     <Compile Include="Controllers\FaleConoscoController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -234,7 +237,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AnuncioViewModel.cs" />
+    <Compile Include="ViewModels\BairroViewModel.cs" />
+    <Compile Include="ViewModels\CidadeViewModel.cs" />
     <Compile Include="ViewModels\ContatoViewModel.cs" />
+    <Compile Include="ViewModels\EstadoViewModel.cs" />
     <Compile Include="ViewModels\FAQViewModel.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -242,6 +248,8 @@
     <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-select.css" />
+    <Content Include="Content\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -273,6 +281,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-bootstrap-select.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -289,6 +298,13 @@
     <Content Include="Scripts\apps\anuncios\controllers\cadastro-proximo-controller.js" />
     <Content Include="Scripts\apps\anuncios\controllers\cadastro-final-controller.js" />
     <Content Include="Scripts\apps\anuncios\services\anuncio-service.js" />
+    <Content Include="Scripts\apps\anuncios\services\cidade-service.js" />
+    <Content Include="Scripts\apps\anuncios\services\bairro-service.js" />
+    <Content Include="Scripts\apps\anuncios\services\estado-service.js" />
+    <Content Include="Scripts\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\i18n\defaults-pt_BR.js" />
+    <Content Include="Scripts\i18n\defaults-pt_BR.min.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\ng-tags-input.js" />
     <Content Include="Scripts\validate.cpf.js" />
@@ -382,6 +398,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstrap-select.css.map" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\PKG.pubxml" />
     <Content Include="Scripts\bootstrap.js" />
@@ -390,6 +407,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\bootstrap-select.js.map" />
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />

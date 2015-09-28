@@ -19,6 +19,9 @@ namespace PortalConhecimento.UI.Web
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IContatoRepository, ContatoRepository>();
             container.RegisterType<IAnuncioRepository, AnuncioRepository>();
+            container.RegisterType<IEstadoRepository, EstadoRepository>();
+            container.RegisterType<ICidadeRepository, CidadeRepository>();
+            container.RegisterType<IBairroRepository, BairroRepository>();
             container.RegisterType<AccountController>(new InjectionConstructor());
 
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));

@@ -32,6 +32,9 @@ namespace PortalConhecimento.UI.Web
                 "~/Scripts/apps/anuncios/controllers/cadastro-inicial-controller.js",
                 "~/Scripts/apps/anuncios/controllers/cadastro-proximo-controller.js",
                 "~/Scripts/apps/anuncios/controllers/cadastro-final-controller.js",
+                "~/Scripts/apps/anuncios/services/estado-service.js",
+                "~/Scripts/apps/anuncios/services/cidade-service.js",
+                "~/Scripts/apps/anuncios/services/bairro-service.js",
                 "~/Scripts/apps/anuncios/services/anuncio-service.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -46,6 +49,13 @@ namespace PortalConhecimento.UI.Web
                 "~/Scripts/toastr.js",
                 "~/Scripts/toastr-defaults.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-select").Include(
+                "~/Scripts/bootstrap-select.js",
+                "~/Scripts/i18n/defaults-pt_BR.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap-select").Include("~/Scripts/angular-bootstrap-select.js"));
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/font-awesome.css",
@@ -55,7 +65,11 @@ namespace PortalConhecimento.UI.Web
                 "~/Content/ng-tags-input.css",
                 "~/Content/ng-tags-input.bootstrap.css"));
 
+            bundles.Add(new StyleBundle("~/Content/bootstrap-select").Include("~/Content/bootstrap-select.css"));
+
             bundles.Add(new StyleBundle("~/Content/toastr").Include("~/Content/toastr.css"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

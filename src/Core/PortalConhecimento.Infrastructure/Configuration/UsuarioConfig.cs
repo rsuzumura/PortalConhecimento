@@ -1,10 +1,5 @@
 ﻿using PortalConhecimento.Domain.Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PortalConhecimento.Infrastructure.Configuration
 {
@@ -21,6 +16,7 @@ namespace PortalConhecimento.Infrastructure.Configuration
             this.Property(p => p.SecurityStamp).HasMaxLength(8000);
             this.Property(p => p.PhoneNumber).HasMaxLength(50);
             this.Property(p => p.UserName).IsRequired().HasMaxLength(256);
+            this.HasMany<Anuncio>(u => u.Anuncios).WithRequired(a => a.Usuario).HasForeignKey(a => a.IdUsuario);
         }
     }
 }
