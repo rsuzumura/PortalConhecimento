@@ -7,7 +7,7 @@
     <img src="../Content/images/coruja.png" class="coruja-icon" alt="" />
 </div>
 
-<form>
+<form novalidate ng-submit="avancar()">
     <div class="form-group">
         <h4>Qual a disponibilidade de horários para ministrar as palestras?</h4>
         <div class="panel panel-warning">
@@ -61,16 +61,16 @@
 
     <div class="row">
         <div class="col-md-6 form-group">
-            <a class="btn btn-warning" href="#/">
+            <button class="btn btn-warning" type="button" ng-click="voltar()">
                 <i class="fa fa-arrow-circle-left"></i>
                 Anterior
-            </a>
+            </button>
         </div>
         <div class="col-md-6 form-group text-right">
-            <a class="btn btn-warning" href="#/final">
+            <button class="btn btn-warning">
                 Avançar
                 <i class="fa fa-arrow-circle-right pull-right"></i>
-            </a>
+            </button>
         </div>
     </div>
 </form>
