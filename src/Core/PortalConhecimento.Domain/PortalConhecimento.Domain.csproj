@@ -40,7 +40,9 @@
     <Compile Include="Enums\StatusAnuncio.cs" />
     <Compile Include="Enums\TipoAnuncio.cs" />
     <Compile Include="Interfaces\Repositories\IAnuncioRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IBairroRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IBairroRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
     <Compile Include="Interfaces\Repositories\ICidadeRepository.cs" />
     <Compile Include="Interfaces\Repositories\IContatoRepository.cs" />
