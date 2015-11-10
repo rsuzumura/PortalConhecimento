@@ -1,5 +1,18 @@
 ﻿app.controller('cadastroProximoCtrl', ['$scope', '$cookies', '$location', function ($scope, $cookies, $location) {
-    $scope.anuncio = {};
+    $scope.anuncio = {
+        'DiaUtil': [0, 0],
+        'FimDeSemanaFeriado': [0, 0]
+    };
+    $scope.slideOptions = {
+        formatter: function (value) {
+            var hora1 = parseInt(value[0] / 60);
+            var minutos1 = value[0] % 60;
+            var hora2 = parseInt(value[1] / 60);
+            var minutos2 = value[1] % 60;
+            return [right('0' + hora1, 2) + ':' + right('0' + minutos1, 2), right('0' + hora2, 2) + ':' + right('0' + minutos2, 2)];
+        }
+    };
+
     if ($cookies.anuncio) {
         $scope.anuncio = $cookies.anuncio;
     }

@@ -45,6 +45,8 @@ namespace PortalConhecimento.UI.Web
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-slider").Include("~/Scripts/bootstrap-slider.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
                 "~/Scripts/toastr.js",
                 "~/Scripts/toastr-defaults.js"));
@@ -55,7 +57,7 @@ namespace PortalConhecimento.UI.Web
 
             bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap-select").Include("~/Scripts/angular-bootstrap-select.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular-rangeslider").Include("~/Scripts/angular.rangeSlider.js"));
+            bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap-slider").Include("~/Scripts/slider.js"));
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -69,7 +71,7 @@ namespace PortalConhecimento.UI.Web
 
             bundles.Add(new StyleBundle("~/Content/bootstrap-select").Include("~/Content/bootstrap-select.css"));
 
-            bundles.Add(new StyleBundle("~/Content/angular-rangeslider").Include("~/Content/angular.rangeSlider.css"));
+            bundles.Add(new StyleBundle("~/Content/bootstrap-slider").Include("~/Content/bootstrap-slider.css"));
 
             bundles.Add(new StyleBundle("~/Content/toastr").Include("~/Content/toastr.css"));
 

@@ -255,6 +255,8 @@
     <Content Include="Content\angular.rangeSlider.css" />
     <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap-select.min.css" />
+    <Content Include="Content\bootstrap-slider.css" />
+    <Content Include="Content\bootstrap-slider.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -309,10 +311,13 @@
     <Content Include="Scripts\apps\anuncios\services\estado-service.js" />
     <Content Include="Scripts\bootstrap-select.js" />
     <Content Include="Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\bootstrap-slider.js" />
+    <Content Include="Scripts\bootstrap-slider.min.js" />
     <Content Include="Scripts\i18n\defaults-pt_BR.js" />
     <Content Include="Scripts\i18n\defaults-pt_BR.min.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\ng-tags-input.js" />
+    <Content Include="Scripts\slider.js" />
     <Content Include="Scripts\validate.cpf.js" />
     <Content Include="Scripts\toastr-defaults.js" />
     <Content Include="Content\toastr.css" />
