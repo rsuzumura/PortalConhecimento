@@ -1,5 +1,5 @@
 ﻿app.controller('cadastroProximoCtrl', ['$scope', '$cookies', '$location', function ($scope, $cookies, $location) {
-    $scope.anuncio = {
+    $scope.anuncio = $cookies.anuncio ? $cookies.anuncio : {
         'DiaUtil': [0, 0],
         'FimDeSemanaFeriado': [0, 0]
     };
@@ -15,19 +15,6 @@
 
     if ($cookies.anuncio) {
         $scope.anuncio = $cookies.anuncio;
-    }
-
-    if (!$scope.anuncio.DiaUtilInicio) {
-        $scope.anuncio.DiaUtilInicio = 0;
-    }
-    if (!$scope.anuncio.DiaUtilFim) {
-        $scope.anuncio.DiaUtilFim = 0;
-    }
-    if (!$scope.anuncio.FimDeSemanaFeriadoInicio) {
-        $scope.anuncio.FimDeSemanaFeriadoInicio = 0;
-    }
-    if (!$scope.anuncio.FimDeSemanaFeriadoFim) {
-        $scope.anuncio.FimDeSemanaFeriadoFim = 0;
     }
 
     $scope.formatarHora = function (valor) {

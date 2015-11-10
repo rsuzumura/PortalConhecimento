@@ -75,7 +75,7 @@ namespace PortalConhecimento.UI.Web
 
             bundles.Add(new StyleBundle("~/Content/toastr").Include("~/Content/toastr.css"));
 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

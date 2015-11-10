@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="panel panel-warning">
+        <div class="panel panel-warning" ng-show="anuncio.EstadoId">
             <div class="panel-body">
                 <div class="form-group">
                     <label>Cidade de:</label>
@@ -44,17 +44,16 @@
             </div>
         </div>
 
-        <div class="panel panel-warning">
+        <div class="panel panel-warning" ng-show="anuncio.CidadeId">
             <div class="panel-body">
                 <div class="form-group">
                     <label>Bairro de:</label>
                     <select class="form-control" data-live-search="true"
-                            ng-model="anuncio.BairroId"
+                            ng-model="anuncio.BairroIds"
                             select-model="bairros"
-                            ng-collection="bairros"
+                            ng-collection="bairros" multiple
                             ng-options="item.Id as item.Nome for item in bairros"
                             data-selectpicker data-style="btn btn-default btn-sm">
-                        <option value="">Selecione...</option>
                     </select>
                 </div>
             </div>
