@@ -1,4 +1,4 @@
-﻿app.controller('cadastroFinalCtrl', ['$scope', '$location', '$cookies', 'estadoService', 'cidadeService', 'bairroService', function ($scope, $location, $cookies, estadoService, cidadeService, bairroService) {
+﻿app.controller('cadastroFinalCtrl', ['$scope', '$location', '$cookies', 'estadoService', 'cidadeService', 'bairroService', 'anuncioService', function ($scope, $location, $cookies, estadoService, cidadeService, bairroService, anuncioService) {
     $scope.anuncio = {};
     $scope.estados = [];
     $scope.cidades = [];
@@ -39,6 +39,13 @@
         $cookies.anuncio = $scope.anuncio;
         $location.url('proximo');
     };
+
+    $scope.gravar = function () {
+        anuncioService.post($scope.anuncio)
+            .success(function (data) {
+                console.log('ok')
+            });
+    }
 
     estadoService.listar()
         .success(function (data) {
