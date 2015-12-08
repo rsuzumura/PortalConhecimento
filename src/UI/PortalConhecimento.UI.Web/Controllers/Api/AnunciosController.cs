@@ -53,6 +53,24 @@ namespace PortalConhecimento.UI.Web.Controllers.Api
             }
 
             anuncio.IdUsuario = User.Identity.GetUserId<int>();
+
+            if (model.DiasUteis)
+            {
+                anuncio.HoraInicialDiaUtil = TimeSpan.FromMinutes(model.DiaUtil[0]);
+                anuncio.HoraFinalDiaUtil = TimeSpan.FromMinutes(model.DiaUtil[1]);
+            }
+
+            if (model.FinsDeSemanaEFeriados)
+            {
+                anuncio.HoraInicialFimDeSemanaEFeriado = TimeSpan.FromMinutes(model.FimDeSemanaFeriado[0]);
+                anuncio.HoraFinalDeSemanaEFeriado = TimeSpan.FromMinutes(model.FimDeSemanaFeriado[1]);
+            }
+
+            foreach (var bairroId in model.BairroIds)
+            {
+                var bairro = _anuncioRepository.BuscarBairroPorId(bairroId);
+                anuncio.Bairros.Add(bairro);
+            }
             _anuncioRepository.Add(anuncio);
 
             return Request.CreateResponse(HttpStatusCode.OK);

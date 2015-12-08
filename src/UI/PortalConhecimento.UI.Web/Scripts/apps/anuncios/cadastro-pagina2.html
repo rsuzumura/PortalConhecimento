@@ -77,7 +77,7 @@
             </button>
         </div>
         <div class="col-md-6 form-group text-right">
-            <button class="btn btn-warning" ng-click="avancar()">
+            <button class="btn btn-warning" ng-disabled="!anuncio.DiasUteis && !anuncio.FinsDeSemanaEFeriados && !anuncio.ACombinar">
                 Avançar
                 <i class="fa fa-arrow-circle-right pull-right"></i>
             </button>

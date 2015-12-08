@@ -11,23 +11,25 @@
     <div class="form-group">
         <label>Tema/Assunto/Título:</label>
         <div class="input-group">
-            <input type="text" class="form-control" ng-model="anuncio.Titulo" required />
+            <input name="titulo" type="text" class="form-control" ng-model="anuncio.Titulo" required />
             <span class="input-group-btn">
                 <button class="btn btn-default" style="background-color: #999933; color: #FFFFFF; font-weight: bold">
                     ?
                 </button>
             </span>
         </div>
+        <div class="text-danger" ng-show="!formAnuncio1.titulo.$valid && formAnuncio1.titulo.$touched">O tema/assunto/título é obrigatório.</div>
     </div>
 
     <div class="form-group">
         <label>Descrição detalhada sobre o que é exposto:</label>
         <div class="input-group">
-            <textarea class="form-control" rows="4" ng-model="anuncio.Descricao" required></textarea>
+            <textarea name="descricao" class="form-control" rows="4" ng-model="anuncio.Descricao" required></textarea>
             <span class="input-group-addon btn btn-primary" style="background-color: #999933; color: #FFFFFF; font-weight: bold">
                 ?
             </span>
         </div>
+        <div class="text-danger" ng-show="!formAnuncio1.descricao.$valid && formAnuncio1.descricao.$touched">A descrição é obrigatória.</div>
     </div>
 
     <div class="form-group">
@@ -51,7 +53,7 @@
     </div>
 
     <div class="form-group text-right">
-        <button class="btn btn-warning">
+        <button class="btn btn-warning" ng-disabled="!formAnuncio1.$valid">
             Avançar
             <i class="fa fa-arrow-circle-right pull-right"></i>
         </button>

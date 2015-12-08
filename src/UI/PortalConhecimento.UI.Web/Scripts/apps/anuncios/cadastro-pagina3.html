@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="panel panel-warning" ng-show="anuncio.CidadeId">
+        <div class="panel panel-warning" ng-show="anuncio.CidadeId && bairros.length">
             <div class="panel-body">
                 <div class="form-group">
                     <label>Bairro de:</label>
@@ -55,6 +55,9 @@
                             ng-options="item.Id as item.Nome for item in bairros"
                             data-selectpicker data-style="btn btn-default btn-sm">
                     </select>
+                </div>
+                <div class="form-group" ng-show="anuncio.BairroIds.length">
+                    <label class="label label-primary" ng-repeat="bairroId in anuncio.BairroIds">{{obterBairro(bairroId)}}</label>
                 </div>
             </div>
         </div>
@@ -82,6 +85,20 @@
                     <div class="col-md-6 form-group" ng-show="anuncio.TipoCusto == 1">
                         <input type="number" class="form-control input-sm" />
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>Palavras Chave</h4>
+        <div class="panel panel-warning">
+            <div class="panel-body">
+                <div class="form-group">
+                    <tags-input ng-model="anuncio.Tags"
+                                placeholder="Informe as palavras-chave para consulta do anúncio (pressione ENTER por palavra)"
+                                replace-spaces-with-dashes="false"
+                                display-property="Palavra">
+                        <auto-complete source="loadTags($query)" min-length="3"></auto-complete>
+                    </tags-input>
                 </div>
             </div>
         </div>

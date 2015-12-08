@@ -20,7 +20,6 @@ namespace PortalConhecimento.Infrastructure.Configuration
             this.Property(p => p.Experiencia).HasMaxLength(8000);
             this.Property(p => p.EstadoId).IsOptional();
             this.Property(p => p.CidadeId).IsOptional();
-            this.Property(p => p.BairroId).IsOptional();
             this.HasOptional<Estado>(p => p.Estado)
                 .WithMany()
                 .HasForeignKey(p => p.EstadoId);
@@ -28,10 +27,6 @@ namespace PortalConhecimento.Infrastructure.Configuration
             this.HasOptional<Cidade>(p => p.Cidade)
                 .WithMany()
                 .HasForeignKey(p => p.CidadeId);
-
-            this.HasOptional<Bairro>(p => p.Bairro)
-                .WithMany()
-                .HasForeignKey(p => p.BairroId);
         }
     }
 }

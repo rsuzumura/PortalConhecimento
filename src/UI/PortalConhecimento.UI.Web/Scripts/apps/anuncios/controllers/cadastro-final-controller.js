@@ -45,7 +45,20 @@
             .success(function (data) {
                 console.log('ok')
             });
-    }
+    };
+
+    $scope.obterBairro = function (id) {
+        for (var i = 0; i < $scope.bairros.length; i++) {
+            if ($scope.bairros[i].Id == id) {
+                return $scope.bairros[i].Nome;
+            }
+        }
+        return '';
+    };
+
+    $scope.loadTags = function (query) {
+        return anuncioService.listarPalavras(query);
+    };
 
     estadoService.listar()
         .success(function (data) {

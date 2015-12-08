@@ -10,6 +10,7 @@ namespace PortalConhecimento.Domain.Entities
         {
             this.StatusAnuncio = Enums.StatusAnuncio.EmAprovacao;
             this.Tags = new HashSet<Tag>();
+            this.Bairros = new HashSet<Bairro>();
         }
 
         public int Id { get; set; }
@@ -33,7 +34,6 @@ namespace PortalConhecimento.Domain.Entities
         public decimal? Valor { get; set; }
         public int? EstadoId { get; set; }
         public int? CidadeId { get; set; }
-        public int? BairroId { get; set; }
         public decimal? Preco { get; set; }
         public string Experiencia { get; set; }
         public TipoAnuncio TipoAnuncio { get; set; }
@@ -41,7 +41,7 @@ namespace PortalConhecimento.Domain.Entities
         public virtual Usuario Usuario { get; set; }
         public virtual Estado Estado { get; set; }
         public virtual Cidade Cidade { get; set; }
-        public virtual Bairro Bairro { get; set; }
+        public virtual ICollection<Bairro> Bairros { get; set; }
         public StatusAnuncio StatusAnuncio { get; set; }
     }
 }

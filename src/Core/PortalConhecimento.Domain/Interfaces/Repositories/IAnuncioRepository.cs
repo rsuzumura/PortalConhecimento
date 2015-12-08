@@ -10,5 +10,7 @@ namespace PortalConhecimento.Domain.Interfaces.Repositories
         IEnumerable<Tag> ListarPalavrasComInicial(string inicioPalavra, int quantidade);
 
         Tag BuscarTagPorPalavra(string palavra);
+
+        Bairro BuscarBairroPorId(int bairroId);
     }
 }

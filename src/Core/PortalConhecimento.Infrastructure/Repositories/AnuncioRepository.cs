@@ -33,5 +33,11 @@ namespace PortalConhecimento.Infrastructure.Repositories
 
             return result;
         }
+
+        public Bairro BuscarBairroPorId(int bairroId)
+        {
+            var bairro = _context.Bairros.FirstOrDefault(b => b.Id == bairroId);
+            return bairro;
+        }
     }
 }
