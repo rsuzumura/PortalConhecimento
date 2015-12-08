@@ -43,7 +43,7 @@
     $scope.gravar = function () {
         anuncioService.post($scope.anuncio)
             .success(function (data) {
-                console.log('ok')
+                window.location.href = "/portaldoconhecimento1br/home/index/?cadastroOk=true";
             });
     };
 

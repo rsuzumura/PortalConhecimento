@@ -120,6 +120,27 @@
     </div>
 </div>
 
+<div class="modal fade" id="modalOk" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border: solid #faa61a; background-color: #e0e0e0; color: #cc9900; font-size: 16pt; font-weight: bold">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">CADASTRO EFETUADO COM SUCESSO!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="margin-top: 10px; margin-bottom: 10px">
+                    Parabéns!
+                </p>
+                <p class="text-center" style="margin-top: 10px; margin-bottom: 10px">Seu cadastro está completo.</p>
+                <p class="text-center" style="margin-top: 10px; margin-bottom: 10px">Boa sorte e aproveite!</p>
+                <div>
+                    <img src="~/Content/images/icon-ok-palestra.png" alt="" class="img img-responsive center-block" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
     @{
         object message;
@@ -131,6 +152,15 @@
         <script>
             $(function () {
                 toastr.info('@message.ToString()', "Mensagem Enviada com Sucesso!");
+            });
+        </script>
+    }
+
+    @if (ViewBag.CadastroOk != null && ViewBag.CadastroOk == true)
+    {
+        <script>
+            $(function () {
+                $("#modalOk").modal();
             });
         </script>
     }

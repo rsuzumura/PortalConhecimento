@@ -66,11 +66,15 @@ namespace PortalConhecimento.UI.Web.Controllers.Api
                 anuncio.HoraFinalDeSemanaEFeriado = TimeSpan.FromMinutes(model.FimDeSemanaFeriado[1]);
             }
 
-            foreach (var bairroId in model.BairroIds)
+            if (model.BairroIds != null)
             {
-                var bairro = _anuncioRepository.BuscarBairroPorId(bairroId);
-                anuncio.Bairros.Add(bairro);
+                foreach (var bairroId in model.BairroIds)
+                {
+                    var bairro = _anuncioRepository.BuscarBairroPorId(bairroId);
+                    anuncio.Bairros.Add(bairro);
+                }
             }
+
             _anuncioRepository.Add(anuncio);
 
             return Request.CreateResponse(HttpStatusCode.OK);

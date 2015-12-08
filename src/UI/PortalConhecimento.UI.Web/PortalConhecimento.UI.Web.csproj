@@ -278,6 +278,7 @@
     <Content Include="Content\images\coruja.png" />
     <Content Include="Content\images\fotoDepoimento.jpg" />
     <Content Include="Content\images\header-bg.png" />
+    <Content Include="Content\images\icon-ok-palestra.png" />
     <Content Include="Content\images\marca.png" />
     <Content Include="Content\images\menu-icons.png" />
     <Content Include="Content\images\oferecer-palestras-icon.png" />
