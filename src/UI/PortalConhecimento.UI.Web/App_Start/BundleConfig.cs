@@ -24,6 +24,10 @@ namespace PortalConhecimento.UI.Web
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-animate.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular-bootstrap").Include(
+                "~/Scripts/angular-ui/ui-bootstrap.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/ng-tags-input").Include("~/Scripts/ng-tags-input.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/apps/anuncio-app").Include(
@@ -63,7 +67,8 @@ namespace PortalConhecimento.UI.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/font-awesome.css",
-                "~/Content/site.css"));
+                "~/Content/site.css",
+                "~/Content/ui-bootstrap-csp.css"));
 
             bundles.Add(new StyleBundle("~/Content/ng-tags-input").Include(
                 "~/Content/ng-tags-input.css",
