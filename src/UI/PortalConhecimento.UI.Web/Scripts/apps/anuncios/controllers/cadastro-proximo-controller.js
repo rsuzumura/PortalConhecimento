@@ -1,8 +1,14 @@
-﻿app.controller('cadastroProximoCtrl', ['$scope', '$cookies', '$location', function ($scope, $cookies, $location) {
+﻿app.controller('cadastroProximoCtrl', ['$scope', '$cookies', '$location', '$sce', function ($scope, $cookies, $location, $sce) {
     $scope.anuncio = $cookies.anuncio ? $cookies.anuncio : {
         'DiaUtil': [0, 0],
         'FimDeSemanaFeriado': [0, 0]
     };
+
+    $scope.horariosHelp = $sce.trustAsHtml("Indique se você tem disponibilidade de horário nos dias de semana, nos finais de semana, ou em ambos. Para isso, Deixe marcadas as caixas de seleção abaixo  (X).<br />" +
+        "Depois, arraste os círculos brancos para indicar qual o período do dia (horário) que você tem disponível.<br />" +
+        "Os horários também aparecerão na caixa azul: (<label class='label label-primary ng-binding'>Das 00:00 até 23:59</label>)<br />" +
+        "Caso você tenha um horário mais flexível, você ainda pode marcar a opção &quot;À combinar&quot;");
+
     $scope.slideOptions = {
         formatter: function (value) {
             var hora1 = parseInt(value[0] / 60);

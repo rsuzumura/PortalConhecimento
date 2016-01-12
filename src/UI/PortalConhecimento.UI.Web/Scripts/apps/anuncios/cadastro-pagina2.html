@@ -9,7 +9,17 @@
 
 <form novalidate ng-submit="avancar()">
     <div class="form-group">
-        <h4>Qual a disponibilidade de horários para ministrar as palestras?</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Qual a disponibilidade de horários para ministrar as palestras?</h4>
+            </div>
+            <div class="col-md-4 text-right">
+                <button type="button" class="btn btn-primary" style="background-color: #999933; color: #FFFFFF; font-weight: bold"
+                        tooltip-html="horariosHelp" tooltip-trigger="click" tooltip-placement="right">
+                    ?
+                </button>
+            </div>
+        </div>
         <div class="panel panel-warning">
             <div class="panel-body">
                 <div class="form-group">
